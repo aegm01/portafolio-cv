@@ -202,9 +202,7 @@ p {
 
 /* ********** Menu ********** */
 .menu-btn {
-  /* Mod Mio */
   margin-right: 2rem;
-  /* Mod Mio */
   outline: thin solid var(--first-color);
   border: 0;
   cursor: pointer;
@@ -308,6 +306,7 @@ p {
   text-decoration: none;
   color: var(--white-color);
   background-color: var(--first-color);
+  margin-top: 1rem;
 }
 
 .container {
@@ -398,6 +397,7 @@ p {
 .footer {
   margin-bottom: var(--header-height);
   padding: 0.5rem;
+  padding-bottom: 2.5rem;
   text-align: center;
   color: var(--white-color);
   background-color: var(--third-color);
@@ -469,27 +469,6 @@ p {
   .services .section-title {
     grid-column: span 2;
   }
-
-  /* Mod Mios S*/
-  .container-portfolio a {
-    display: grid;
-    grid-template-columns: repeat(1, 100%);
-    justify-content: space-between;
-    align-content: center;
-  }
-
-  .container-portfolio > .portfolio {
-    display: grid;
-    grid-template-columns: repeat(2, 50);
-  }
-
-  .container-portfolio .section-title {
-    grid-column: span 2;
-  }
-
-  .contact-form .btn {
-    margin-left: 0.52rem;
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -502,17 +481,6 @@ p {
 
   .container-ul {
     margin-left: 0;
-  }
-
-  .container-portfolio > .portfolio {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    align-content: center;
-  }
-
-  .container-portfolio .section-title {
-    grid-column: span 3;
   }
 
   .contact-form textarea {
@@ -534,12 +502,10 @@ p {
     height: calc(var(--header-height) - 0.5rem);
   }
 
-  .services > .container {
-    grid-template-columns: repeat(3, 30%);
-  }
-
-  .services .section-title {
-    grid-column: span 3;
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: space-between;
   }
 }
 
@@ -565,10 +531,34 @@ p {
   display: inline-block;
   width: 40px;
   height: 40px;
+  padding: 0.5rem;
 }
 
 .container-portfolio {
   margin-left: auto;
   margin-right: auto;
   max-width: var(--max-width);
+}
+
+.tech {
+  padding-bottom: 0;
+}
+
+.portfolio a:first-of-type img {
+  display: block;
+  object-fit: cover;
+  margin: 1rem auto;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+}
+
+.portfolio a img {
+  display: block;
+  object-fit: cover;
+  margin: 1rem auto;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+}
+
+.portfolio h5 {
+  text-align: center;
+  margin-top: 2.5rem;
 }
